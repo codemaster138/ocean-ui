@@ -1,4 +1,6 @@
 # OCEAN
+![OCEAN Logo](/assets/ocean_brand.png)
+
 OCEAN is a design system for react.js, built with styled-components. It is clean and modern, and can be easily customized using styled-components. A website is in the works, but it'll probably take a while before it's ready.
 
 The OCEAN design system is actively maintained, with new components coming out every month!

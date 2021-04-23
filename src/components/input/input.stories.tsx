@@ -18,3 +18,9 @@ export const Password = Template.bind({});
 Password.args = {
   type: "password"
 };
+
+export const Error = Template.bind({});
+Error.args = {
+  type: "password",
+  error: "Invalid password"
+};

@@ -40,8 +40,8 @@ WithFooter.args = {
   width: 500,
   footer: (
     <>
-      <Button>Such Exit</Button>
-      <Button primary>So Next   <UilArrowRight size="13"/></Button>
+      <Button>Exit</Button>
+      <Button primary><span>Next</span><UilArrowRight size="13"/></Button>
     </>
   )
 };
@@ -57,8 +57,8 @@ Dismissible.args = {
   width: 500,
   footer: (
     <>
-      <Button>Such Exit</Button>
-      <Button primary>So Next   <UilArrowRight size="13"/></Button>
+      <Button>Exit</Button>
+      <Button primary><span>Next</span><UilArrowRight size="13"/></Button>
     </>
   ),
   dismiss() {}
@@ -75,8 +75,8 @@ Compact.args = {
   width: 300,
   footer: (
     <>
-      <Button wide>Very Cancel</Button>
-      <Button primary wide>Much coin</Button>
+      <Button wide>Cancel</Button>
+      <Button primary wide>Buy Coins</Button>
     </>
   ),
   compact: true,

@@ -7,3 +7,5 @@ The OCEAN design system is actively maintained, with new components coming out e
 
 ## Radicle Users
 If you wish to view this repository on [radicle upstream](https://radicle.xyz/), please use the following address:
+
+`rad:git:hwd1yreg9mmg83j1w3ekaz3pzbg7zeba3cxw69xx1bzezpwbun7i3u6jnya`

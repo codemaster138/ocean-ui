@@ -3,7 +3,7 @@ OCEAN is a design system for react.js, built with styled-components. It is clean
 
 The OCEAN design system is actively maintained, with new components coming out every month!
 
-*`Note:`* OCEAN design is currently in BETA, so we can't guarantee the reliability of the system.
+**`Note:`** OCEAN design is currently in BETA, so we can't guarantee the reliability of the system.
 
 ## Radicle Users
 If you wish to view this repository on [radicle upstream](https://radicle.xyz/), please use the following address:

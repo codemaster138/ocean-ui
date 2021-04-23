@@ -1,5 +1,5 @@
 {
-  "name": "ocean",
+  "name": "@ocean-ui/ocean",
   "version": "0.1.0",
   "description": "A clean, modern design system for react, built with styled-components",
   "main": "dist/index.js",

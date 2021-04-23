@@ -95,7 +95,8 @@ export interface CardProps {
   dismiss?: () => void;
   compact?: boolean;
   footer?: ReactNode;
-  footerStyle: CSSProperties;
+  footerStyle?: CSSProperties;
+  width?: number;
 }
 
 export default function Card(props: CardProps & HTMLAttributes<any>) {

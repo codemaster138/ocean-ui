@@ -1,61 +1,42 @@
 {
   "name": "ocean",
   "version": "0.1.0",
-  "private": true,
-  "main": "dist/index.cjs.js",
+  "description": "A clean, modern design system for react, built with styled-components",
+  "main": "dist/index.js",
   "module": "dist/index.esm.js",
-  "source": "src/index.js",
-  "dependencies": {
-    "@iconscout/react-unicons": "^1.1.6",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react-scripts": "4.0.3",
-    "styled-components": "^5.2.3",
-    "web-vitals": "^1.0.1"
-  },
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "build": "rollup -c"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "repository": "https://github.com/codemaster138/ocean-design",
+  "author": "Jake Sarjeant <pygamer138@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "styled-components": "^5.2.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.13.16",
     "@babel/core": "^7.13.16",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/preset-react": "^7.13.13",
-    "@rollup/plugin-babel": "^5.3.0",
+    "@iconscout/react-unicons": "^1.1.6",
+    "@rollup/plugin-commonjs": "^18.0.0",
+    "@rollup/plugin-node-resolve": "^11.2.1",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/react": "^6.2.9",
+    "@types/react": "^17.0.3",
+    "@types/styled-components": "^5.1.9",
     "babel-loader": "^8.2.2",
-    "npm-run-all": "^4.1.5",
-    "rollup": "^2.45.2",
-    "rollup-plugin-delete": "^2.0.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "rollup": "^2.45.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "typescript": "^4.2.4"
   },
   "peerDependencies": {
+    "@iconscout/react-unicons": "^1.1.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   }

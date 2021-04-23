@@ -1,22 +1,27 @@
-import babel from '@rollup/plugin-babel';
-import external from 'rollup-plugin-peer-deps-external';
-import del from 'rollup-plugin-delete';
-import pkg from './package.json';
+import peerDepsExternal from "rollup-plugin-peer-deps-external";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
+import typescript from "rollup-plugin-typescript2";
+const packageJson = require("./package.json");
 
-const exports_ =  {
-    input: pkg.source,
-    output: [
-        { file: pkg.main, format: 'cjs' },
-        { file: pkg.module, format: 'esm' }
-    ],
-    plugins: [
-        external(),
-        babel({
-            exclude: 'node_modules/**'
-        }),
-        del({ targets: ['dist/*'] }),
-    ],
-    external: Object.keys(pkg.peerDependencies || {}),
+export default {
+  input: "src/index.ts",
+  output: [
+    {
+      file: packageJson.main,
+      format: "cjs",
+      sourcemap: true
+    },
+    {
+      file: packageJson.module,
+      format: "esm",
+      sourcemap: true
+    }
+  ],
+  plugins: [
+    peerDepsExternal(),
+    resolve(),
+    commonjs(),
+    typescript({ useTsconfigDeclarationDir: true }),
+  ]
 };
-
-export default exports_;

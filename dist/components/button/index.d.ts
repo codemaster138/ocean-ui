@@ -1,2 +1,6 @@
-import { ButtonHTMLAttributes } from 'react';
-export default function Button(props: ButtonHTMLAttributes<any>): JSX.Element;
+import { ButtonHTMLAttributes } from "react";
+export interface ButtonProps {
+    primary?: boolean;
+    wide?: boolean;
+}
+export default function Button(props: ButtonProps & ButtonHTMLAttributes<any>): JSX.Element;

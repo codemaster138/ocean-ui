@@ -36,7 +36,12 @@ const StyledButton = styled.button`
   }
 `;
 
-export default function Button(props: ButtonHTMLAttributes<any>) {
+export interface ButtonProps {
+  primary?: boolean;
+  wide?: boolean;
+}
+
+export default function Button(props: ButtonProps & ButtonHTMLAttributes<any>) {
   return (
     <StyledButton {...props }/>
   )

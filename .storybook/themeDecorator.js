@@ -3,7 +3,6 @@ import lightTheme from "../src/themes/light";
 
 const DecoContainer = styled.div`
   width: 100%;
-  height: 100vh;
   background: ${(p) => p.theme.bg};
   box-sizing: border-box;
   padding: 24px;

@@ -20,18 +20,19 @@ const StyledCard = styled.div`
 const StyledCardBody: any = styled.div`
   box-sizing: border-box;
   width: 100%;
-  padding: ${(p: any) => p.compact ? '24px' : '40px'};
-  padding-bottom: ${(p: any) => (p.hasFooter ? "0px" : (p.compact ? '24px' : '40px'))};
+  padding: ${(p: any) => (p.compact ? "24px" : "40px")};
+  padding-bottom: ${(p: any) =>
+    p.hasFooter ? "0px" : p.compact ? "24px" : "40px"};
 
   p {
     color: ${(p: any) => p.theme.accent_1};
   }
 
-  &> :first-child {
+  & > :first-child {
     margin-top: 0;
   }
 
-  &> :last-child {
+  & > :last-child {
     margin-bottom: 0;
   }
   position: relative;
@@ -39,20 +40,22 @@ const StyledCardBody: any = styled.div`
 `;
 
 const StyledCardFooter: any = styled.div`
-  background: ${(p: any) => p.compact ? 'transparent' : p.theme.bg};
+  background: ${(p: any) => (p.compact ? "transparent" : p.theme.bg)};
   border-radius: 0;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
-  margin-top: ${(p: any) => p.compact ? '0px' : '40px'};
-  border-top: 1px solid ${(p: any) => p.compact ? 'transparent' : p.theme.accent_3};
+  margin-top: ${(p: any) => (p.compact ? "0px" : "40px")};
+  border-top: 1px solid
+    ${(p: any) => (p.compact ? "transparent" : p.theme.accent_3)};
   width: 100%;
   box-sizing: border-box;
-  padding: 16px ${(p: any) => p.compact ? '24px' : '40px'};
+  padding: 16px ${(p: any) => (p.compact ? "24px" : "40px")};
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   position: relative;
+  gap: 20px;
 `;
 
 const StyledCardDismiss = styled.button`
@@ -64,7 +67,7 @@ const StyledCardDismiss = styled.button`
   align-items: center;
   justify-content: center;
   background: ${(p) => p.theme.accent_3};
-  color: ${p => p.theme.fg};
+  color: ${(p) => p.theme.fg};
   padding: 3px;
 
   position: absolute;
@@ -98,11 +101,22 @@ export interface CardProps {
 export default function Card(props: CardProps & HTMLAttributes<any>) {
   return (
     <StyledCard {...{ ...props, children: undefined }}>
-      { props.dismiss && <StyledCardDismiss onClick={props.dismiss}><UilTimes /></StyledCardDismiss>}
-      <StyledCardBody compact={props.compact} hasFooter={props.footer ? true : false}>
+      {props.dismiss && (
+        <StyledCardDismiss onClick={props.dismiss}>
+          <UilTimes />
+        </StyledCardDismiss>
+      )}
+      <StyledCardBody
+        compact={props.compact}
+        hasFooter={props.footer ? true : false}
+      >
         {props.children}
       </StyledCardBody>
-      {props.footer && <StyledCardFooter compact={props.compact} style={props.footerStyle}>{props.footer}</StyledCardFooter>}
+      {props.footer && (
+        <StyledCardFooter compact={props.compact} style={props.footerStyle}>
+          {props.footer}
+        </StyledCardFooter>
+      )}
     </StyledCard>
   );
 }
@@ -117,7 +131,7 @@ export const CardForm = styled.form`
   margin: 0;
   padding: 0;
 
-  &> :first-child {
+  & > :first-child {
     margin-top: 0;
   }
 `;

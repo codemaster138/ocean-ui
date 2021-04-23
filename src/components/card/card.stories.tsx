@@ -75,8 +75,8 @@ Compact.args = {
   width: 300,
   footer: (
     <>
-      <Button>Very Cancel</Button>
-      <Button primary>Much coin</Button>
+      <Button wide>Very Cancel</Button>
+      <Button primary wide>Much coin</Button>
     </>
   ),
   compact: true,

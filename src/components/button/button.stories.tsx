@@ -38,3 +38,12 @@ Destructive.args = {
   wide: false,
   destructive: true
 }
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  children: 'Disabled',
+  wide: false,
+  destructive: false,
+  primary: false,
+  disabled: true
+}

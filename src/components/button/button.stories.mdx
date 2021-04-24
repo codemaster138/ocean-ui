@@ -107,3 +107,20 @@ If a button is destructive, apply the `destructive` prop. You should never place
 </Canvas>
 
 <ArgsTable story="Destructive"/>
+
+# Disabling Buttons
+To communicate to the user that some other action must be completed before a button can be used, use the `disabled` prop. A disabled button has a lower opacity, which communicate to the user that it cannot be used. Also, it changes the cursor to `not-allowed`.
+
+<Canvas>
+  <Story name="Disabled" args={{
+    children: "Disabled Action",
+    disabled: true,
+    primary: true,
+    destructive: false,
+    wide: false
+  }}>
+    { Template.bind({}) }
+  </Story>
+</Canvas>
+
+<ArgsTable story="Disabled"/>

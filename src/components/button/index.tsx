@@ -36,6 +36,11 @@ const StyledButton = styled.button`
     border-color: ${(p: any) => (p.primary ? "transparent" : p.theme.accent_3)};
     opacity: 0.9;
   }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
 `;
 
 export interface ButtonProps {

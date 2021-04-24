@@ -7,11 +7,11 @@ const StyledButton = styled.button`
   justify-content: center;
   flex-flow: row wrap;
   cursor: pointer;
-  border: ${(p: any) => (p.primary ? "0" : "1")}px solid
+  border: ${(p: any) => ((p.primary || p.destructive) ? "0" : "1")}px solid
     ${(p: any) => (p.primary ? "transparent" : p.theme.accent_2)};
-  background: ${(p: any) => (p.primary ? p.theme.primary : "transparent")};
-  color: ${(p: any) => (p.primary ? p.theme.on_primary : p.theme.fg)};
-  padding: ${(p: any) => (p.primary ? "9px 17px" : "8px 16px")};
+  background: ${(p: any) => (p.primary ? p.theme.primary : (p.destructive ? p.theme.col_red : "transparent"))};
+  color: ${(p: any) => (p.primary ? p.theme.on_primary : (p.destructive ? "#ffffff" : p.theme.fg))};
+  padding: ${(p: any) => ((p.primary || p.destructive) ? "9px 17px" : "8px 16px")};
   border-radius: 5px;
   transition: 300ms;
   font-size: 13px;
@@ -41,8 +41,24 @@ const StyledButton = styled.button`
 export interface ButtonProps {
   primary?: boolean;
   wide?: boolean;
+  destructive?: boolean;
 }
 
 export default function Button(props: ButtonProps & ButtonHTMLAttributes<any>) {
-  return <StyledButton {...{ ...props, className: (props.className || '' ) + ` button${props.primary ? ' button--primary' : ''}`}}/>;
+  return (
+    <StyledButton
+      {...{
+        ...props,
+        className:
+          (props.className || "") +
+          ` button${
+            props.primary
+              ? " button--primary"
+              : props.destructive
+              ? " button--destructive"
+              : ""
+          }`,
+      }}
+    />
+  );
 }

@@ -22,6 +22,7 @@ So, if you have only one call to action, make it a primary button.
     args={{
       primary: true,
       children: "Primary Button",
+      wide: false
     }}
   >
     {Template.bind({})}
@@ -38,6 +39,7 @@ If you have multiple CTAs, make the most important one primary, and all others s
     args={{
       primary: false,
       children: "Secondary Button",
+      wide: false
     }}
   >
     {Template.bind({})}
@@ -54,6 +56,9 @@ If you have multiple CTAs, make the most important one primary, and all others s
     <Button primary>Primary</Button>
   </Story>
 </Canvas>
+
+## Wide Buttons
+In very small containers, such as alerts, or when only a single primary button is present, the `wide` prop may be used to make a button fill the entire width of its container.
 
 ## Icons in buttons
 
@@ -72,16 +77,33 @@ Also, It is possible that the following snippet shows an `MDXCreateElement` comp
 <Canvas>
   <Story name="Icon Left" args={{
     primary: false,
-    text: "Edit"
+    text: "Edit",
+    wide: false
   }}>
     { (args) => <Button {...args}><UilEdit size="13"/><span>{ args.text }</span></Button> }
   </Story>
   <Story name="Icon Right" args={{
     primary: true,
-    text: "Next"
+    text: "Next",
+    wide: false
   }}>
     { (args) => <Button {...args}><span>{ args.text }</span><UilArrowRight size="13"/></Button> }
   </Story>
 </Canvas>
 
 <ArgsTable story="Icon Left" />
+
+# Destructive Buttons
+If a button is destructive, apply the `destructive` prop. You should never place a primary button next to a destructive button. So, if a destructive button is present, all other buttons must be secondary. However, never make a destructive button primary.
+
+<Canvas>
+  <Story name="Destructive" args={{
+    children: "Delete Account",
+    destructive: true,
+    wide: false
+  }}>
+    { Template.bind({}) }
+  </Story>
+</Canvas>
+
+<ArgsTable story="Destructive"/>

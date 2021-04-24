@@ -31,3 +31,10 @@ WithIcon.args = {
   primary: false,
   wide: false
 }
+
+export const Destructive = Template.bind({});
+Destructive.args = {
+  children: 'Delete Account',
+  wide: false,
+  destructive: true
+}

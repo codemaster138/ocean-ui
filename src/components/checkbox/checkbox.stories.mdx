@@ -1,0 +1,53 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import Checkbox from ".";
+import { Card, CardHeading,Button } from "../..";
+
+<Meta title="MDX/Checkbox" component={Checkbox} />
+
+export const Template = (args) => (
+  <Card
+    width={500}
+    footer={
+      <>
+        <span></span>
+        <Button primary>Submit</Button>
+      </>
+    }
+  >
+    <CardHeading>
+      Food poll
+    </CardHeading>
+    <p>
+      Please select all that apply:
+    </p>
+    <Checkbox defaultChecked>I like Pizza 🍕</Checkbox>
+    <Checkbox>I like Burgers 🍔</Checkbox>
+  </Card>
+);
+
+# Checkbox
+
+A checkbox can be used to toggle an option **without** causing an immediate response. For example, to chose whether to do something during the submission process, before submitting a form.
+
+If an option _should_ produce an immediate response, use a toggle slider.
+
+<Canvas>
+  <Story
+    name="Default"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## For developers
+
+Code snippet:
+
+```tsx
+import { Checkbox, Card } from "@ocean-ui/ocean"
+
+...
+<Card>
+  <Checkbox defaultChecked={/* Self-explanatory */} checked={/* Current state (true or false)*/} onToggle={(value: boolean) => { /* Save toggled value */ }}>Test Checkbox</Checkbox>
+</Card>
+```

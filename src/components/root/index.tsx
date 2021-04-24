@@ -16,6 +16,10 @@ const StyledOceanRoot: any = styled.div`
     margin-left: 16px;
   }
 
+  * + .checkbox {
+    margin-top: 16px;
+  }
+
   * {
     font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
       "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",

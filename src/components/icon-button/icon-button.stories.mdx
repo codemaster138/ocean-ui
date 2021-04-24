@@ -1,0 +1,82 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import IconButton from ".";
+import { Card } from "../..";
+import { UilSetting, UilBell } from "@iconscout/react-unicons";
+
+<Meta title="MDX/Icon Button" component={IconButton} />
+
+export const Template = (args) => <IconButton {...args}><UilSetting/></IconButton>;
+export const CardTemplate = (args) => <Card><IconButton {...args}><UilSetting/></IconButton></Card>;
+
+# Icon Button
+
+An Icon Button is a CTA just like a button, except that it _only_ contains an icon. In terms of choosing whether to use the primary or secondary style, the same rules apply as for the regular button.
+
+If the icon button in placed on the default background color, add the `light` prop. Remove it if placed on `accent_4`.
+
+<Canvas>
+  <Story name="Default" args={{ primary: false, light: true }}>
+    { Template.bind({}) }
+  </Story>
+  <Story name="Primary" args={{ primary: true, light: true }}>
+    { Template.bind({}) }
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default"/>
+
+The Code samples are broken, so here are code samples for the above:
+```tsx
+import { IconButton } from "@ocean-ui/ocean";
+import { UilSetting } from "@iconscout/react-unicons";
+
+...
+
+<IconButton light>
+  <UilSetting/>
+</IconButton>
+<IconButton primary light>
+  <UilSetting/>
+</IconButton>
+
+...
+```
+
+<Canvas>
+  <Story name="On Card" args={{ primary: false, light: false }}>
+    { CardTemplate.bind({}) }
+  </Story>
+</Canvas>
+
+<ArgsTable story="On Card"/>
+
+Code sample:
+```tsx
+import { Card, IconButton } from "@ocean-ui/ocean";
+import { UilSetting } from "@iconscout/react-unicons";
+
+...
+
+<Card>
+  <IconButton>
+    <UilSetting/>
+  </IconButton>
+</Card>
+
+...
+```
+
+## Badges
+A badge is a small element containing a small integer or *very short* text. It should be used, for example, when displaying the number of notifications a user has received since last checking.
+
+Set the `badge` option to any string or number to display it in the badge. If you wish to customize the color, use the `badgeColor` option. The `badgeColor` option may be any or key from the theme object, or a hex value, the latter of which is **not recommended** and should never be used.
+
+The default badge color is the primary color. It is recommended to use `accent_1` as `badgeColor` when the IconButton is primary.
+
+<Canvas>
+  <Story name="Badge" args={{ primary: false, light: false, badge: 5, badgeColor: 'primary' }}>
+    { Template.bind({}) }
+  </Story>
+</Canvas>
+
+<ArgsTable story="Badge"/>

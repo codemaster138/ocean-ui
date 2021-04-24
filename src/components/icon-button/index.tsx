@@ -6,10 +6,10 @@ const StyledIconButton: any = styled.button`
   width: 36px;
   height: 36px;
   border-radius: 5px;
-  background: ${(p: any) => (p.primary ? p.theme.primary : p.theme.act_3)};
+  background: ${(p: any) => (p.primary ? p.theme.primary : (p.light ? p.theme.accent_4 : p.theme.accent_3))};
   color: ${(p: any) => (p.primary ? p.theme.on_primary : p.theme.fg)};
-  box-shadow: 0px 6px 15px
-    ${(p: any) => (p.primary ? p.theme.primary : p.theme.accent_2) + "40"};
+  box-shadow: 0px 5px 10px
+    ${(p: any) => (p.primary ? p.theme.primary + "40" : p.theme.accent_2 + (p.light ? "80" : "40"))};
   transition: 300ms;
   border: none;
   display: flex;
@@ -53,6 +53,7 @@ export interface IconButtonProps {
   badgeColor?: string;
   badgeTextColor?: string;
   primary?: boolean;
+  light?: boolean;
 }
 
 export default function IconButton(props: IconButtonProps & ButtonHTMLAttributes<any>) {

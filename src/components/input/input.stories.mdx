@@ -1,0 +1,84 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import Input from ".";
+import { Card, CardHeading } from "../..";
+
+<Meta title="MDX/Input" component={Input} />
+
+export const Template = (args) => (
+  <Card>
+    <CardHeading>Just a Card with an input</CardHeading>
+    <Input {...args} />
+  </Card>
+);
+
+# Input
+
+The input component can be used to receive user input in the form of text, numbers or passwords. *An input should always have a label (Set via the `label` prop)!*
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: "Example Input",
+      type: "text"
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default"/>
+
+Code snippet:
+
+```tsx
+import { Input, Card } from "@ocean-ui/ocean";
+
+...
+<Card>
+  <Input label="Example Input"/>
+</Card>
+...
+```
+
+The input provides multiple props that might be of interest to developers. Most importantly, `update` and `value`. This following code example shows how one can use the `Input` component like a normal input:
+
+```tsx
+import { Button, Input, Card, CardForm, CardHeading } from "@ocean-ui/ocean";
+import { useState } from "react";
+
+export default function MyForm() {
+  const [name, setName] = useState("");
+
+  return (
+    <CardForm
+      noValidate
+      onSubmit={() => {
+        /* Submit form */
+      }}
+    >
+      <Card
+        footer={
+          <>
+            <Button>Exit</Button>
+            <Button
+              type="submit"
+              primary
+              onClick={() => {
+                /* Submit form */
+              }}
+            >
+              Submit
+            </Button>
+          </>
+        }
+      >
+        <CardHeading>Simple form</CardHeading>
+        <Input label="Your name" type="text" value={name} update={setName} />
+      </Card>
+    </CardForm>
+  );
+}
+```
+
+Each time the content changes, `update` is called, with the updated content.

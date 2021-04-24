@@ -1,0 +1,87 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import Button from ".";
+import { UilEdit, UilArrowRight } from "@iconscout/react-unicons";
+
+<Meta title="MDX/Button" component={Button} />
+
+export const Template = (args) => <Button {...args} />;
+
+# Button
+
+Like in every modern design system, the preffered component for CTAs is the button.
+
+## Primary vs. Secondary Buttons
+
+Buttons come in multiple flavors, namely _primary_ and _secondary_. There should _never_ be only a secondary button, and never more than one primary button (within a certain scope, like a card or the body).
+
+So, if you have only one call to action, make it a primary button.
+
+<Canvas>
+  <Story
+    name="Primary"
+    args={{
+      primary: true,
+      children: "Primary Button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Primary" />
+
+If you have multiple CTAs, make the most important one primary, and all others secondary. _The Primary button should always be the rightmost of all buttons in a row._
+
+<Canvas>
+  <Story
+    name="Secondary"
+    args={{
+      primary: false,
+      children: "Secondary Button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Secondary" />
+
+#### Both
+
+<Canvas>
+  <Story name="Both">
+    <Button>Secondary</Button>
+    <Button primary>Primary</Button>
+  </Story>
+</Canvas>
+
+## Icons in buttons
+
+A button may optionally contain an icon. Unless this icon benefits from being placed on the right side (Like for example a rightwards arrow), the icon should be located on the left.
+
+Why should the icon be on the left? Read this article: [“Where to place icons next to button labels”](https://uxmovement.com/buttons/where-to-place-icons-next-to-button-labels/) by Anthony on [uxmovement.com](https://uxmovement.com)
+
+However, only use icons when they help the user understand what a button does.
+
+### Note to developers
+
+If a button contains an icon, put any text it contains into a `<span>`. This allows the icon to space itself correctly.
+
+Also, It is possible that the following snippet shows an `MDXCreateElement` component. This is a but with storybook. Please replace it with a `span` tag when using OCEAN.
+
+<Canvas>
+  <Story name="Icon Left" args={{
+    primary: false,
+    text: "Edit"
+  }}>
+    { (args) => <Button {...args}><UilEdit size="13"/><span>{ args.text }</span></Button> }
+  </Story>
+  <Story name="Icon Right" args={{
+    primary: true,
+    text: "Next"
+  }}>
+    { (args) => <Button {...args}><span>{ args.text }</span><UilArrowRight size="13"/></Button> }
+  </Story>
+</Canvas>
+
+<ArgsTable story="Icon Left" />

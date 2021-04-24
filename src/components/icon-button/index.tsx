@@ -52,11 +52,12 @@ export interface IconButtonProps {
   badge?: ReactNode;
   badgeColor?: string;
   badgeTextColor?: string;
+  primary?: boolean;
 }
 
 export default function IconButton(props: IconButtonProps & ButtonHTMLAttributes<any>) {
   return (
-    <StyledIconButton {...{ ...props, children: undefined }}>
+    <StyledIconButton {...{ ...props, className: (props.className || '' ) + ` icon-button${props.primary ? ' icon-button--primary' : ''}`, children: undefined}}>
       {props.badge && (
         <StyledIconButtonBadge badgeTextColor={props.badgeTextColor} badgeColor={props.badgeColor}>
           {props.badge}

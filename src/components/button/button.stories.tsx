@@ -5,7 +5,7 @@ import { UilEditAlt } from "@iconscout/react-unicons";
 
 // eslint-disable-next-line
 export default {
-  title: 'Components/Button'
+  title: 'Components/Button',
 } as Meta;
 
 const Template: any = (args: any) => <Button {...args}/>

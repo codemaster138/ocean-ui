@@ -108,6 +108,7 @@ export default forwardRef(function (
       {label && <StyledInputLabel>{label}</StyledInputLabel>}
       <StyledInputInner>
         <StyledInput
+          class="input-container_input"
           onFocus={onFocus}
           ref={ref}
           error={error ? true : false || errorOutline}

@@ -44,5 +44,5 @@ export interface ButtonProps {
 }
 
 export default function Button(props: ButtonProps & ButtonHTMLAttributes<any>) {
-  return <StyledButton {...props} />;
+  return <StyledButton {...{ ...props, className: (props.className || '' ) + ` button${props.primary ? ' button--primary' : ''}`}}/>;
 }

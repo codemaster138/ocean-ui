@@ -1,0 +1,42 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import { Separator } from ".";
+import { Card, CardHeading, Button, Checkbox } from "../..";
+
+<Meta title="MDX/Misc" />
+
+# Miscellaneous
+
+A bunch of miscellaneous little components you might need from time to time.
+
+## Separator
+
+export const SeparatorTemplate = (args) => (
+  <Card
+    width={500}
+    footer={
+      <>
+        <span></span>
+        <Button primary>Submit</Button>
+      </>
+    }
+  >
+    <CardHeading>
+      Food poll
+    </CardHeading>
+    <p>
+      Please select all that apply:
+    </p>
+    <Checkbox defaultChecked>I like pizza 🍕</Checkbox>
+    <Checkbox>I like burgers 🍔</Checkbox>
+    <Separator/>
+    <Checkbox>I like fries 🍟</Checkbox>
+  </Card>
+);
+
+A horizontal line used as a loose method of separating/grouping elements.
+
+<Canvas>
+  <Story name="Separator">
+    { SeparatorTemplate.bind({}) }
+  </Story>
+</Canvas>

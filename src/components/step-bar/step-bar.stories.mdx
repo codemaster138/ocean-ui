@@ -1,0 +1,49 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import StepBar from ".";
+import { Card, CardHeading } from "../..";
+
+<Meta title="MDX/Step Bar" component={StepBar} />
+
+export const Template = (args) => <StepBar {...args} />;
+export const CenterDecorator = (StoryContent) => (
+  <div
+    style={{
+      width: "100%",
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <StoryContent />
+  </div>
+);
+
+# Stepbar
+
+A step bar helps the user track their progress through a guided sequence of steps.
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      width: 500,
+      steps: 5,
+      current: 2,
+    }}
+    decorators={[CenterDecorator]}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default"/>
+
+Code snippet:
+```tsx
+import { StepBar } from "@ocean-ui/ocean";
+
+...
+<StepBar steps={5} current={2} width={500}/>
+...
+```

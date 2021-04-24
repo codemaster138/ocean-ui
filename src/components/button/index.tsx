@@ -19,7 +19,7 @@ const StyledButton = styled.button`
   flex-grow: ${(p: any) => (p.wide ? "1" : "initial")};
 
   svg {
-    margin: 0 16px;
+    margin: 0 10px;
     height: 13px;
     width: auto;
   }

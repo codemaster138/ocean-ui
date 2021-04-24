@@ -1,0 +1,183 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import Card, { CardHeading } from ".";
+import { Button } from "../..";
+import {
+  UilArrowLeft,
+  UilArrowRight,
+  UilTimes,
+  UilCheck
+} from "@iconscout/react-unicons";
+
+<Meta title="MDX/Card" component={Card} />
+
+export const Template = (args) => <Card {...args} />;
+export const CenterDecorator = (StoryContent) => (
+  <div
+    style={{
+      width: "100%",
+      height: "100%",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    }}
+  >
+    <StoryContent />
+  </div>
+);
+
+# Card
+
+Cards can be used to group components together and separate them from other components.
+
+<Canvas>
+  <Story
+    name="Default"
+    parameters={{ docs: { source: { type: "code" } } }}
+    args={{
+      width: 500,
+    }}
+  >
+    {(args) => (
+      <Card {...args}>
+        <CardHeading>Just a Card</CardHeading>
+        <p>
+          Cards can be used to group components together and separate them from
+          others. You should never nest cards inside one another.
+        </p>
+      </Card>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
+
+## Footer
+
+A footer can be used to add CTAs to a card. For example, it could contain a "Next Step" and "Back" button.
+
+When a footer is present, it should _always_ contain a primary button to the right, and optionally a secondary button to the left. No other elements are allowed in the footer.
+
+<Canvas>
+  <Story
+    name="With Footer"
+    parameters={{ docs: { source: { type: "code" } } }}
+    args={{
+      width: 500,
+    }}
+  >
+    {(args) => (
+      <Card
+        {...args}
+        footer={
+          <>
+            <Button>
+              <UilArrowLeft size="13" />
+              <span>Back</span>
+            </Button>
+            <Button primary>
+              <span>Next</span>
+              <UilArrowRight size="13" />
+            </Button>
+          </>
+        }
+      >
+        <CardHeading>Just a Card</CardHeading>
+        <p>
+          Cards can be used to group components together and separate them from
+          others. You should never nest cards inside one another.
+        </p>
+      </Card>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="With Footer" />
+
+## Pop-overs
+
+When a card is used as a pop-over, provide a function in the `dismiss` prop. This will show a small dismiss button in the top right corner of the card.
+
+<Canvas>
+  <Story
+    name="Dismissible"
+    parameters={{ docs: { source: { type: "code" } } }}
+    args={{
+      width: 500,
+      dismiss: () => {},
+    }}
+    decorators={[CenterDecorator]}
+  >
+    {(args) => (
+      <Card
+        {...args}
+        footer={
+          <>
+            <Button>
+              <UilArrowLeft size="13" />
+              <span>Back</span>
+            </Button>
+            <Button primary>
+              <span>Next</span>
+              <UilArrowRight size="13" />
+            </Button>
+          </>
+        }
+      >
+        <CardHeading>Just a Card</CardHeading>
+        <p>
+          Cards can be used to group components together and separate them from
+          others. You should never nest cards inside one another.
+        </p>
+      </Card>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Dismissible" />
+
+### Alert
+
+When a compact alert is needed, you should also add the `compact` prop. This will reduce the margin and change the footer to make the card more compact, which can be useful for a small pop-up, for example to confirm an action.
+
+If you want to insist that the user takes action upon the alert, you can simply remove the `dismiss` prop, which will make the dismiss button disappear.
+
+<Canvas>
+  <Story
+    name="Compact"
+    parameters={{ docs: { source: { type: "code" } } }}
+    args={{
+      width: 300,
+      dismiss: () => {},
+      compact: true,
+    }}
+    decorators={[CenterDecorator]}
+  >
+    {(args) => (
+      <Card
+        {...args}
+        footer={
+          <>
+            <Button>
+              <UilTimes size="13" />
+              <span>Cancel</span>
+            </Button>
+            <Button primary>
+              <UilCheck size="13" />
+              <span>Confirm</span>
+            </Button>
+          </>
+        }
+      >
+        <CardHeading>
+          Buy <b>1000</b> DogeCoins?
+        </CardHeading>
+        <p>
+          A compact, dismissible card is preferred for notifications over a
+          regular dismissible card.
+        </p>
+      </Card>
+    )}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Compact" />

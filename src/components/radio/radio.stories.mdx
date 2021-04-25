@@ -1,0 +1,48 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import Radio from ".";
+import { useState } from "react";
+import { Card, CardHeading, Button, Checkbox, Separator } from "../..";
+import { Template } from "./radio.stories.tsx";
+
+<Meta title="MDX/Radio" component={Radio} />
+
+# Radio Buttons
+Radio Buttons allow the user to choose between different options
+
+<Canvas>
+  <Story
+    name="Default"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Code snippet:
+
+```tsx
+import { Card, CardHeading, Button, Radio, Separator } from "@ocean-ui/ocean";
+import { useState } from "react";
+
+function MyComponent(args: any) {
+  const [selected, setSelected] = useState("fast-food");
+
+  return (
+    <Card
+      width={500}
+      footer={
+        <>
+          <span></span>
+          <Button primary>Submit</Button>
+        </>
+      }
+    >
+      <CardHeading>Food poll</CardHeading>
+      <p>Currently selected: <b>{selected}</b></p>
+      <div className="div" onChange={(e: any) => setSelected(e.target.value)}>
+        <Radio groupName="myGroup" value="fast-food" defaultChecked>I love fast food 🍟</Radio>
+        <Radio groupName="myGroup" value="healthy">I'd rather eat healthy 🥗</Radio>
+      </div>
+    </Card>
+  );
+};
+```

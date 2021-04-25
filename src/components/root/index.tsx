@@ -17,7 +17,9 @@ const StyledOceanRoot: any = styled.div`
   }
 
   * + .checkbox,
-  * + .separator {
+  * + .separator,
+  * + .radio,
+  * + .div {
     margin-top: 16px;
   }
 

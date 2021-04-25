@@ -15,7 +15,6 @@ const StyledToggleContainer = styled.label`
 `;
 
 const StyledToggleLabel = styled.span`
-  margin-left: 12px;
   font-size: 13px;
   padding-bottom: 1px;
   color: ${(p: any) => p.theme.accent_1};

@@ -20,7 +20,8 @@ const StyledOceanRoot: any = styled.div`
   * + .separator,
   * + .radio,
   * + .div,
-  * + .toggle {
+  * + .toggle,
+  * + .option-switch {
     margin-top: 16px;
   }
 

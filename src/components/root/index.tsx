@@ -19,7 +19,8 @@ const StyledOceanRoot: any = styled.div`
   * + .checkbox,
   * + .separator,
   * + .radio,
-  * + .div {
+  * + .div,
+  * + .toggle {
     margin-top: 16px;
   }
 

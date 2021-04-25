@@ -1,0 +1,43 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import Toggle from ".";
+import { useState } from "react";
+import { Card, CardHeading, Button, Checkbox, Separator } from "../..";
+import { Template } from "./toggle.stories.tsx";
+
+<Meta title="MDX/Toggle Switch" component={Toggle} />
+
+# Toggle Switch
+A toggle switch is like a checkbox, but it should produce a result immediately when toggled.
+
+<Canvas>
+  <Story
+    name="Default"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Code snippet:
+
+```tsx
+import { ToggleSwitch, Card, Button } from "@ocean-ui/ocean";
+import { useState } from "react";
+
+function MyComponent(args: any) {
+  const [checked, setChecked] = useState(false);
+
+  return (
+    <Card
+      width={500}
+      footer={
+        <>
+          <span></span>
+          <Button primary>Submit</Button>
+        </>
+      }
+    >
+      <ToggleSwitch onToggle={setChecked} checked={checked}>Test toggle seitch</ToggleSwitch>
+    </Card>
+  );
+};
+```

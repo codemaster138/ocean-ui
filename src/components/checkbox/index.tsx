@@ -5,12 +5,13 @@ import React, {
 import { UilCheck } from "@iconscout/react-unicons";
 import styled from "styled-components";
 
-const StyledCheckboxContainer = styled.div`
+const StyledCheckboxContainer = styled.label`
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   flex-flow: row;
+  cursor: pointer;
 `;
 
 const StyledCheckbox = styled.button`
@@ -51,7 +52,7 @@ const StyledCheckbox = styled.button`
   }
 `;
 
-const StyledCheckboxLabel = styled.label`
+const StyledCheckboxLabel = styled.span`
   margin-left: 12px;
   font-size: 13px;
   padding-bottom: 1px;

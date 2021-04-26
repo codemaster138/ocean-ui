@@ -5,7 +5,7 @@ import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
 export default {
-  title: 'Components/Icon Button'
+  title: 'Components/UI/Icon Button'
 } as Meta;
 
 const Template: any = (args: any) => <IconButton {...args}/>;

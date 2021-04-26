@@ -5,7 +5,7 @@ import React from 'react';
 import { Meta } from '@storybook/react/types-6-0';
 
 export default {
-  title: 'Components/Card'
+  title: 'Components/UI/Card'
 } as Meta;
 
 const Template: any = (args: any) => <Card {...args}/>

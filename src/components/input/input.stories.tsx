@@ -4,7 +4,7 @@ import Input from ".";
 
 // eslint-disable-next-line
 export default {
-  title: 'Components/Input'
+  title: 'Components/UI/Input'
 } as Meta;
 
 const Template: any = (args: any) => <Input {...args}/>;

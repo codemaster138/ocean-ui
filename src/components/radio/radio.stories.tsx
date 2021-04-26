@@ -5,7 +5,7 @@ import { Card, CardHeading, Button, Checkbox, Separator } from "../..";
 
 // eslint-disable-next-line
 export default {
-  title: "Components/Radio",
+  title: "Components/UI/Radio",
 } as Meta;
 
 export const Template: any = (args: any) => {

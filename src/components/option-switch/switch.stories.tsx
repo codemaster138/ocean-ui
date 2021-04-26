@@ -7,7 +7,7 @@ import { CardHeading } from "../card";
 
 // eslint-disable-next-line
 export default {
-  title: "Components/Option Switch",
+  title: "Components/UI/Option Switch",
 } as Meta;
 
 export const Template: any = () => {

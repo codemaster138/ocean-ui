@@ -4,7 +4,7 @@ import { default as StepBarComponent } from ".";
 
 // eslint-disable-next-line
 export default {
-  title: 'Components/Step Bar'
+  title: 'Components/UI/Step Bar'
 } as Meta;
 
 const Template: any = (args: any) => <StepBarComponent {...args}/>

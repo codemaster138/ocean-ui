@@ -5,7 +5,7 @@ import { Card } from "../..";
 
 // eslint-disable-next-line
 export default {
-  title: "Components/Toggle Switch",
+  title: "Components/UI/Toggle Switch",
 } as Meta;
 
 export const Template: any = () => {

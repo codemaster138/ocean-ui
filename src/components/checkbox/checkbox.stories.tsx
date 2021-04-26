@@ -5,7 +5,7 @@ import { Card } from "../..";
 
 // eslint-disable-next-line
 export default {
-  title: 'Components/Checkbox',
+  title: 'Components/UI/Checkbox',
 } as Meta;
 
 const Template: any = (args: any) => <Card><Checkbox {...args}/></Card>;

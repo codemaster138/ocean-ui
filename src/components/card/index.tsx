@@ -125,6 +125,7 @@ export default function Card(props: CardProps & HTMLAttributes<any>) {
 export const CardHeading = styled.h1`
   font-size: 16px;
   font-weight: 500;
+  color: ${p => p.theme.fg};
 `;
 
 export const CardForm = styled.form`

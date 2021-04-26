@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 export default {
-  name: 'default_light',
+  name: 'default_dark',
   /**
    * Primary Color
    */
@@ -12,18 +12,18 @@ export default {
   /**
    * Foreground color
    */
-  fg: '#232633',
+  fg: '#e2e2e2',
   /**
    * Accents
    */
   accent_1: '#9194a4',
-  accent_2: '#d7dcec',
-  accent_3: '#e4e7f0',
-  accent_4: '#ffffff',
+  accent_2: '#5d6270',
+  accent_3: '#4b4d55',
+  accent_4: '#232633',
   /**
    * Backround
    */
-  bg: '#f9fafc',
+  bg: '#161822',
   /**
    * Colors
    */

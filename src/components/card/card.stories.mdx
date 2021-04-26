@@ -1,5 +1,5 @@
 import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
-import Card, { CardHeading } from ".";
+import Card from ".";
 import { Button } from "../..";
 import {
   UilArrowLeft,
@@ -39,7 +39,7 @@ Cards can be used to group components together and separate them from other comp
   >
     {(args) => (
       <Card {...args}>
-        <CardHeading>Just a Card</CardHeading>
+        <h1>Just a Card</h1>
         <p>
           Cards can be used to group components together and separate them from
           others. You should never nest cards inside one another.
@@ -81,7 +81,7 @@ When a footer is present, it should _always_ contain a primary button to the rig
           </>
         }
       >
-        <CardHeading>Just a Card</CardHeading>
+        <h1>Just a Card</h1>
         <p>
           Cards can be used to group components together and separate them from
           others. You should never nest cards inside one another.
@@ -123,7 +123,7 @@ When a card is used as a pop-over, provide a function in the `dismiss` prop. Thi
           </>
         }
       >
-        <CardHeading>Just a Card</CardHeading>
+        <h1>Just a Card</h1>
         <p>
           Cards can be used to group components together and separate them from
           others. You should never nest cards inside one another.
@@ -168,9 +168,9 @@ If you want to insist that the user takes action upon the alert, you can simply 
           </>
         }
       >
-        <CardHeading>
+        <h1>
           Buy <b>1000</b> DogeCoins?
-        </CardHeading>
+        </h1>
         <p>
           A compact, dismissible card is preferred for notifications over a
           regular dismissible card.
@@ -185,5 +185,5 @@ If you want to insist that the user takes action upon the alert, you can simply 
 ## As form
 To use a card as a form, OCEAN exports the `CardForm` component. Use it to wrap around a `Card` component.
 
-# CardHeading
-The `CardHeading` component is simply a heading to be used inside a card. It's that simple. Programmer Interface identical to the HTML `<h1>` tag.
+# h1
+The `h1` component is simply a heading to be used inside a card. It's that simple. Programmer Interface identical to the HTML `<h1>` tag.

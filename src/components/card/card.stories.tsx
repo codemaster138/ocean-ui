@@ -1,4 +1,4 @@
-import Card, { CardHeading } from '.';
+import Card from '.';
 import Button from '../button';
 import { UilArrowRight } from "@iconscout/react-unicons";
 import React from 'react';
@@ -14,7 +14,7 @@ export const Default = Template.bind({});
 Default.args = {
   children: (
     <>
-      <CardHeading>Just a Card</CardHeading>
+      <h1>Just a Card</h1>
       <p>
         Cards can be used to group components together and separate them from others.
         You should never nest cards inside one another.
@@ -28,7 +28,7 @@ export const WithFooter = Template.bind({});
 WithFooter.args = {
   children: (
     <>
-      <CardHeading>Card with footer</CardHeading>
+      <h1>Card with footer</h1>
       <p>
         The footer should only ever contain up to two columns.
         The left should contain a secondary, the right a primary
@@ -50,7 +50,7 @@ export const Dismissible = Template.bind({});
 Dismissible.args = {
   children: (
     <>
-      <CardHeading>Dismissible Card</CardHeading>
+      <h1>Dismissible Card</h1>
       <p>Can be used for notifications.</p>
     </>
   ),
@@ -68,7 +68,7 @@ export const Compact = Template.bind({});
 Compact.args = {
   children: (
     <>
-      <CardHeading>Buy <b>1000</b> DogeCoins?</CardHeading>
+      <h1>Buy <b>1000</b> DogeCoins?</h1>
       <p>A compact, dismissible card is preferred for notifications over a regular dismissible card.</p>
     </>
   ),

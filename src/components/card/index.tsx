@@ -15,6 +15,18 @@ const StyledCard = styled.div`
   position: relative;
   font-size: 13px;
   overflow: initial;
+
+  h1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: ${p => p.theme.fg};
+  }
+
+  h2 {
+    font-size: 13px;
+    font-weight: 500;
+    color: ${p => p.theme.fg};
+  }
 `;
 
 const StyledCardBody: any = styled.div`
@@ -121,12 +133,6 @@ export default function Card(props: CardProps & HTMLAttributes<any>) {
     </StyledCard>
   );
 }
-
-export const CardHeading = styled.h1`
-  font-size: 16px;
-  font-weight: 500;
-  color: ${p => p.theme.fg};
-`;
 
 export const CardForm = styled.form`
   width: 100%;

@@ -1,7 +1,7 @@
 import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
 import Radio from ".";
 import { useState } from "react";
-import { Card, CardHeading, Button, Checkbox, Separator } from "../..";
+import { Card, Button, Checkbox, Separator } from "../..";
 import { Template } from "./radio.stories.tsx";
 
 <Meta title="MDX/UI/Radio" component={Radio} />
@@ -20,7 +20,7 @@ Radio Buttons allow the user to choose between different options
 Code snippet:
 
 ```tsx
-import { Card, CardHeading, Button, Radio, Separator } from "@ocean-ui/ocean";
+import { Card, Button, Radio, Separator } from "@ocean-ui/ocean";
 import { useState } from "react";
 
 function MyComponent(args: any) {
@@ -36,7 +36,7 @@ function MyComponent(args: any) {
         </>
       }
     >
-      <CardHeading>Food poll</CardHeading>
+      <h1>Food poll</h1>
       <p>Currently selected: <b>{selected}</b></p>
       <div className="div" onChange={(e: any) => setSelected(e.target.value)}>
         <Radio groupName="myGroup" value="fast-food" defaultChecked>I love fast food 🍟</Radio>

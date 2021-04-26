@@ -1,12 +1,12 @@
 import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
 import Input from ".";
-import { Card, CardHeading } from "../..";
+import { Card } from "../..";
 
 <Meta title="MDX/UI/Input" component={Input} />
 
 export const Template = (args) => (
   <Card>
-    <CardHeading>Just a Card with an input</CardHeading>
+    <h1>Just a Card with an input</h1>
     <Input {...args} />
   </Card>
 );
@@ -44,7 +44,7 @@ import { Input, Card } from "@ocean-ui/ocean";
 The input provides multiple props that might be of interest to developers. Most importantly, `update` and `value`. This following code example shows how one can use the `Input` component like a normal input:
 
 ```tsx
-import { Button, Input, Card, CardForm, CardHeading } from "@ocean-ui/ocean";
+import { Button, Input, Card, CardForm, h1 } from "@ocean-ui/ocean";
 import { useState } from "react";
 
 export default function MyForm() {
@@ -73,7 +73,7 @@ export default function MyForm() {
           </>
         }
       >
-        <CardHeading>Simple form</CardHeading>
+        <h1>Simple form</h1>
         <Input label="Your name" type="text" value={name} update={setName} />
       </Card>
     </CardForm>

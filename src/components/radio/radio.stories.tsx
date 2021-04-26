@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Radio from ".";
 import { Meta } from "@storybook/react/types-6-0";
-import { Card, CardHeading, Button, Checkbox, Separator } from "../..";
+import { Card, Button, Checkbox, Separator } from "../..";
 
 // eslint-disable-next-line
 export default {
@@ -21,7 +21,7 @@ export const Template: any = (args: any) => {
         </>
       }
     >
-      <CardHeading>Food poll</CardHeading>
+      <h1>Food poll</h1>
       <p>Please select all that apply:</p>
       <Checkbox defaultChecked>I like pizza 🍕</Checkbox>
       <Checkbox>I like burgers 🍔</Checkbox>

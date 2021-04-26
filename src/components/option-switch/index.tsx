@@ -9,11 +9,11 @@ export const StyledOptionSwitchContainer = styled.div`
   display: inline-block;
 `;
 
-export const StyledOptionSwitchWrapper = styled.label`
+export const StyledOptionSwitchWrapper: any = styled.label`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: ${(p: any) => p.centered ? 'center' : 'space-between'};
   flex-flow: row;
 `;
 
@@ -25,13 +25,14 @@ export const StyledOptionSwitchLabel = styled.span`
 
 export interface OptionSwitchProps {
   label?: string | ReactNode;
+  centered?: boolean;
 }
 
 export default function OptionSwitch(
   props: PropsWithChildren<OptionSwitchProps>
 ) {
   return (
-    <StyledOptionSwitchWrapper className="option-switch">
+    <StyledOptionSwitchWrapper className="option-switch" centered={props.centered}>
       { props.label && <StyledOptionSwitchLabel>{props.label}</StyledOptionSwitchLabel> }
       <StyledOptionSwitchContainer {...props} />
     </StyledOptionSwitchWrapper>

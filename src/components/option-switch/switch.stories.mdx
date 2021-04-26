@@ -37,6 +37,7 @@ function MyComponent(args: any) {
       width={500}
     >
       <h1>Appearance Settings</h1>
+      { /* Apply the prop `centered` to center the option switch */ }
       <OptionSwitch label="Color Theme">
         <SwitchOption selected={selected === 'light'} onClick={() => setSelected('light')}>
           <UilSun size="16"/>

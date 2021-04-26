@@ -1161,10 +1161,10 @@ function ToggleSwitch(props) {
 var templateObject_1$2, templateObject_2$1, templateObject_3$1;
 
 var StyledOptionSwitchContainer = Ye.div(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  padding: 4px;\n  border-radius: 5px;\n  background-color: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  display: inline-block;\n"], ["\n  padding: 4px;\n  border-radius: 5px;\n  background-color: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  display: inline-block;\n"])), function (p) { return p.theme.accent_3; }, function (p) { return p.theme.accent_3 + "80"; });
-var StyledOptionSwitchWrapper = Ye.label(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-flow: row;\n"], ["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  flex-flow: row;\n"])));
+var StyledOptionSwitchWrapper = Ye.label(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"], ["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"])), function (p) { return p.centered ? 'center' : 'space-between'; });
 var StyledOptionSwitchLabel = Ye.span(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"], ["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"])), function (p) { return p.theme.accent_1; });
 function OptionSwitch(props) {
-    return (React.createElement(StyledOptionSwitchWrapper, { className: "option-switch" },
+    return (React.createElement(StyledOptionSwitchWrapper, { className: "option-switch", centered: props.centered },
         props.label && React.createElement(StyledOptionSwitchLabel, null, props.label),
         React.createElement(StyledOptionSwitchContainer, __assign({}, props))));
 }

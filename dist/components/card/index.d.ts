@@ -7,5 +7,4 @@ export interface CardProps {
     width?: number;
 }
 export default function Card(props: CardProps & HTMLAttributes<any>): JSX.Element;
-export declare const CardHeading: import("styled-components").StyledComponent<"h1", any, {}, never>;
 export declare const CardForm: import("styled-components").StyledComponent<"form", any, {}, never>;

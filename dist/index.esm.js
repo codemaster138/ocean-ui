@@ -1104,11 +1104,11 @@ function IconButton(props) {
 }
 var templateObject_1$6, templateObject_2$4;
 
-var StyledCard = Ye.div(templateObject_1$5 || (templateObject_1$5 = __makeTemplateObject(["\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  width: ", ";\n  background: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  border-radius: 10px;\n  position: relative;\n  font-size: 13px;\n  overflow: initial;\n"], ["\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  width: ",
-    ";\n  background: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  border-radius: 10px;\n  position: relative;\n  font-size: 13px;\n  overflow: initial;\n"])), function (p) {
+var StyledCard = Ye.div(templateObject_1$5 || (templateObject_1$5 = __makeTemplateObject(["\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  width: ", ";\n  background: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  border-radius: 10px;\n  position: relative;\n  font-size: 13px;\n  overflow: initial;\n\n  h1 {\n    font-size: 16px;\n    font-weight: 500;\n    color: ", ";\n  }\n\n  h2 {\n    font-size: 13px;\n    font-weight: 500;\n    color: ", ";\n  }\n"], ["\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n  width: ",
+    ";\n  background: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  border-radius: 10px;\n  position: relative;\n  font-size: 13px;\n  overflow: initial;\n\n  h1 {\n    font-size: 16px;\n    font-weight: 500;\n    color: ", ";\n  }\n\n  h2 {\n    font-size: 13px;\n    font-weight: 500;\n    color: ", ";\n  }\n"])), function (p) {
     return (p.width && (typeof p.width === "number" ? p.width + "px" : p.width)) ||
         "initial";
-}, function (p) { return p.theme.accent_4; }, function (p) { return p.theme.accent_3 + "80"; });
+}, function (p) { return p.theme.accent_4; }, function (p) { return p.theme.accent_3 + "80"; }, function (p) { return p.theme.fg; }, function (p) { return p.theme.fg; });
 var StyledCardBody = Ye.div(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  box-sizing: border-box;\n  width: 100%;\n  padding: ", ";\n  padding-bottom: ", ";\n\n  p {\n    color: ", ";\n  }\n\n  & > :first-child {\n    margin-top: 0;\n  }\n\n  & > :last-child {\n    margin-bottom: 0;\n  }\n  position: relative;\n  /* padding-top: ", "; */\n"], ["\n  box-sizing: border-box;\n  width: 100%;\n  padding: ", ";\n  padding-bottom: ",
     ";\n\n  p {\n    color: ", ";\n  }\n\n  & > :first-child {\n    margin-top: 0;\n  }\n\n  & > :last-child {\n    margin-bottom: 0;\n  }\n  position: relative;\n  /* padding-top: ", "; */\n"])), function (p) { return (p.compact ? "24px" : "40px"); }, function (p) {
     return p.hasFooter ? "0px" : p.compact ? "24px" : "40px";
@@ -1122,9 +1122,8 @@ function Card(props) {
         React.createElement(StyledCardBody, { compact: props.compact, hasFooter: props.footer ? true : false }, props.children),
         props.footer && (React.createElement(StyledCardFooter, { compact: props.compact, style: props.footerStyle }, props.footer))));
 }
-var CardHeading = Ye.h1(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  font-size: 16px;\n  font-weight: 500;\n  color: ", ";\n"], ["\n  font-size: 16px;\n  font-weight: 500;\n  color: ", ";\n"])), function (p) { return p.theme.fg; });
-var CardForm = Ye.form(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  width: 100%;\n  margin: 0;\n  padding: 0;\n\n  & > :first-child {\n    margin-top: 0;\n  }\n"], ["\n  width: 100%;\n  margin: 0;\n  padding: 0;\n\n  & > :first-child {\n    margin-top: 0;\n  }\n"])));
-var templateObject_1$5, templateObject_2$3, templateObject_3$3, templateObject_4$1, templateObject_5, templateObject_6;
+var CardForm = Ye.form(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  width: 100%;\n  margin: 0;\n  padding: 0;\n\n  & > :first-child {\n    margin-top: 0;\n  }\n"], ["\n  width: 100%;\n  margin: 0;\n  padding: 0;\n\n  & > :first-child {\n    margin-top: 0;\n  }\n"])));
+var templateObject_1$5, templateObject_2$3, templateObject_3$3, templateObject_4$1, templateObject_5;
 
 var StyledOceanRoot = Ye.div(templateObject_1$4 || (templateObject_1$4 = __makeTemplateObject(["\n  width: 100%;\n  background: ", ";\n  box-sizing: border-box;\n\n  .button + .button,\n  .icon-button + .button {\n    margin-left: 16px;\n  }\n\n  * + .checkbox,\n  * + .separator,\n  * + .radio,\n  * + .div,\n  * + .toggle,\n  * + .option-switch {\n    margin-top: 16px;\n  }\n\n  * {\n    font-family: \"Roboto\", -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n      \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\",\n      \"Helvetica Neue\", sans-serif;\n\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n"], ["\n  width: 100%;\n  background: ", ";\n  box-sizing: border-box;\n\n  .button + .button,\n  .icon-button + .button {\n    margin-left: 16px;\n  }\n\n  * + .checkbox,\n  * + .separator,\n  * + .radio,\n  * + .div,\n  * + .toggle,\n  * + .option-switch {\n    margin-top: 16px;\n  }\n\n  * {\n    font-family: \"Roboto\", -apple-system, BlinkMacSystemFont, \"Segoe UI\",\n      \"Roboto\", \"Oxygen\", \"Ubuntu\", \"Cantarell\", \"Fira Sans\", \"Droid Sans\",\n      \"Helvetica Neue\", sans-serif;\n\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n  }\n"])), function (p) { return p.theme.bg; });
 function OceanRoot(_a) {
@@ -1262,5 +1261,5 @@ var dark = {
     col_pink: '#f21ea4',
 };
 
-export { Button, Card, CardForm, CardHeading, index as Checkbox, IconButton, index$1 as Input, OceanRoot, OptionSwitch, Separator, StepBar, SwitchOption, ToggleSwitch, dark as defaultDarkTheme, light as defaultLightTheme };
+export { Button, Card, CardForm, index as Checkbox, IconButton, index$1 as Input, OceanRoot, OptionSwitch, Separator, StepBar, SwitchOption, ToggleSwitch, dark as defaultDarkTheme, light as defaultLightTheme };
 //# sourceMappingURL=index.esm.js.map

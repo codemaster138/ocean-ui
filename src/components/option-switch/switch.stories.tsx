@@ -3,6 +3,7 @@ import OptionSwitch, { SwitchOption } from ".";
 import { Meta } from "@storybook/react/types-6-0";
 import { Card } from "../..";
 import { UilMoon, UilSun } from "@iconscout/react-unicons";
+import { CardHeading } from "../card";
 
 // eslint-disable-next-line
 export default {
@@ -14,14 +15,8 @@ export const Template: any = () => {
 
   return (
     <Card width={500}>
-      <OptionSwitch label="Color Theme">
-        <SwitchOption selected={checked === 'option1'} onClick={() => setChecked('option1')}>
-          <UilMoon size="16"/>
-        </SwitchOption>
-        <SwitchOption selected={checked === 'option2'} onClick={() => setChecked('option2')}>
-          <UilSun size="16"/>
-        </SwitchOption>
-      </OptionSwitch>
+      <CardHeading>Appearance Settings</CardHeading>
+      <p>Here, you can customize the app's look and feel to make it your own.</p>
       <OptionSwitch label="Color Theme">
         <SwitchOption selected={checked === 'option1'} onClick={() => setChecked('option1')}>
           <UilMoon size="16"/>

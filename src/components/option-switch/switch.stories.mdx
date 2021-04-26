@@ -1,0 +1,49 @@
+import { Meta, Story, ArgsTable, Canvas } from "@storybook/addon-docs/blocks";
+import OptionSwitch, { SwitchOption } from ".";
+import { useState } from "react";
+import { Card, CardHeading, Button, Checkbox, Separator } from "../..";
+import { Template } from "./switch.stories.tsx";
+
+<Meta title="MDX/Option Switch" component={OptionSwitch} />
+
+# Option Switch
+An option switch allows the user to *one* of multiple option, and causes an immediate reaction. It can be used, for example, as a tab bar or to choose between a light and dark color scheme.
+
+<Canvas>
+  <Story
+    name="Default"
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Icons
+
+If Icons are used, set their size to **16px**.
+
+## Code Snippet
+
+```tsx
+import { Card, CardHeading, OptionSwitch, SwitchOption } from "@ocean-ui/ocean";
+import { useState } from "react";
+
+function MyComponent(args: any) {
+  const [selected, setSelected] = useState('light');
+
+  return (
+    <Card
+      width={500}
+    >
+      <CardHeading>Appearance Settings</CardHeading>
+      <OptionSwitch label="Color Theme">
+        <SwitchOption selected={selected === 'light'} onClick={() => setSelected('light')}>
+          <UilSun size="16"/>
+        </SwitchOption>
+        <SwitchOption selected={selected === 'dark'} onClick={() => setSelected('dark')}>
+          <UilMoon size="16"/>
+        </SwitchOption>
+      </OptionSwitch>
+    </Card>
+  );
+};
+```

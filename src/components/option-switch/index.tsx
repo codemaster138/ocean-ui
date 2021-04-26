@@ -50,6 +50,7 @@ export const StyledSwitchOption = styled.button`
   align-items: center;
   justify-content: center;
   margin: 0;
+  transition: 300ms;
 
   cursor: pointer;
 `;

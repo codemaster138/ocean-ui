@@ -28,5 +28,24 @@ export const Template: any = () => {
   );
 };
 
+export const Centered: any = () => {
+  const [checked, setChecked] = useState('option1');
+
+  return (
+    <Card width={500}>
+      <h1>Appearance Settings</h1>
+      <p>Here, you can customize the app's look and feel to make it your own.</p>
+      <OptionSwitch centered>
+        <SwitchOption selected={checked === 'option1'} onClick={() => setChecked('option1')}>
+          <UilMoon size="16"/>
+        </SwitchOption>
+        <SwitchOption selected={checked === 'option2'} onClick={() => setChecked('option2')}>
+          <UilSun size="16"/>
+        </SwitchOption>
+      </OptionSwitch>
+    </Card>
+  );
+}
+
 export const Default = Template.bind({});
 Default.args = {};

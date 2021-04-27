@@ -1172,7 +1172,7 @@ var StyledOptionSwitchContainer = Ye.div(templateObject_1$1 || (templateObject_1
 var StyledOptionSwitchWrapper = Ye.label(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"], ["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"])), function (p) { return p.centered ? 'center' : 'space-between'; });
 var StyledOptionSwitchLabel = Ye.span(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"], ["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"])), function (p) { return p.theme.accent_1; });
 function OptionSwitch(props) {
-    return (React__default['default'].createElement(StyledOptionSwitchWrapper, { className: "option-switch", centered: props.centered },
+    return (React__default['default'].createElement(StyledOptionSwitchWrapper, __assign({ className: "option-switch" }, __assign(__assign({}, props), { children: undefined, label: undefined })),
         props.label && React__default['default'].createElement(StyledOptionSwitchLabel, null, props.label),
         React__default['default'].createElement(StyledOptionSwitchContainer, __assign({}, props))));
 }

@@ -32,7 +32,7 @@ export default function OptionSwitch(
   props: PropsWithChildren<OptionSwitchProps>
 ) {
   return (
-    <StyledOptionSwitchWrapper className="option-switch" centered={props.centered}>
+    <StyledOptionSwitchWrapper className="option-switch" {...{...props, children: undefined, label: undefined}}>
       { props.label && <StyledOptionSwitchLabel>{props.label}</StyledOptionSwitchLabel> }
       <StyledOptionSwitchContainer {...props} />
     </StyledOptionSwitchWrapper>

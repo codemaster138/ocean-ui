@@ -32,6 +32,15 @@ export const SidebarLink = styled.a<{ current?: boolean }>`
   background-color: ${(p) => (p.current ? p.theme.primary : "transparent")};
   border-radius: 7px;
   transition: 300ms;
+  margin: 20px 0;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   &:hover {
     color: ${(p) => (p.current ? p.theme.on_primary : p.theme.primary)};

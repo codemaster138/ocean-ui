@@ -9,7 +9,10 @@ export default {
 
 const Template: any = () => (
   <Sidebar>
-    <SidebarLink href="/">Foobarbaz</SidebarLink>
+    <div>
+      <SidebarLink href="/" current>Foobarbaz</SidebarLink>
+      <SidebarLink href="/">Bar baz buzz</SidebarLink>
+    </div>
   </Sidebar>
 );
 

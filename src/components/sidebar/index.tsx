@@ -11,7 +11,7 @@ export default styled.div<{ small: boolean }>`
   align-items: center;
   justify-content: space-between;
   flex-flow: column;
-  img {
+  img, svg {
     width: 100%;
     height: auto;
   }

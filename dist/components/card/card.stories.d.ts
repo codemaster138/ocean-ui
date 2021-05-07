@@ -5,3 +5,4 @@ export declare const Default: any;
 export declare const WithFooter: any;
 export declare const Dismissible: any;
 export declare const Compact: any;
+export declare const Subcard: any;

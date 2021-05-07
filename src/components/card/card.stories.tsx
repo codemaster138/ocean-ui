@@ -82,3 +82,15 @@ Compact.args = {
   compact: true,
   dismiss() {}
 };
+
+export const Subcard = Template.bind({});
+Subcard.args = {
+  children: (
+    <>
+      <h1>Test card</h1>
+      <Template width="100%" subcard>
+        <h1>Subcard</h1>
+      </Template>
+    </>
+  )
+}

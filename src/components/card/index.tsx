@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { UilTimes } from "@iconscout/react-unicons";
 import React, { CSSProperties, HTMLAttributes, ReactNode } from "react";
 
-const StyledCard = styled.div`
+const StyledCard = styled.div<{ subcard?: boolean }>`
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -11,6 +11,8 @@ const StyledCard = styled.div`
     "initial"};
   background: ${(p) => p.theme.accent_4};
   box-shadow: 0px 5px 10px ${(p) => p.theme.accent_3 + "80"};
+  ${p => p.subcard && 'box-shadow: none'};
+  ${p => p.subcard && 'border: 1px solid ' + p.theme.accent_3};
   border-radius: 10px;
   position: relative;
   font-size: 13px;
@@ -35,6 +37,8 @@ const StyledCardBody: any = styled.div`
   padding: ${(p: any) => (p.compact ? "24px" : "40px")};
   padding-bottom: ${(p: any) =>
     p.hasFooter ? "0px" : p.compact ? "24px" : "40px"};
+
+  ${(p: any) => p.subcard && 'padding: 24px'};
 
   p {
     color: ${(p: any) => p.theme.accent_1};
@@ -109,6 +113,7 @@ export interface CardProps {
   footer?: ReactNode;
   footerStyle?: CSSProperties;
   width?: number;
+  subcard?: boolean;
 }
 
 export default function Card(props: CardProps & HTMLAttributes<any>) {
@@ -120,6 +125,7 @@ export default function Card(props: CardProps & HTMLAttributes<any>) {
         </StyledCardDismiss>
       )}
       <StyledCardBody
+        subcard={props.subcard}
         compact={props.compact}
         hasFooter={props.footer ? true : false}
       >

@@ -16,7 +16,6 @@ export default styled.div<{ small?: boolean }>`
   svg {
     width: 100%;
     height: auto;
-    margin-bottom: 40px;
   }
 `;
 

@@ -11,6 +11,10 @@ export default styled.div<{ small: boolean }>`
   align-items: center;
   justify-content: space-between;
   flex-flow: column;
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 export const SidebarLink = styled.a<{ current: boolean }>`

@@ -1,6 +1,6 @@
 {
   "name": "@ocean-ui/ocean",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A clean, modern design system for react, built with styled-components",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -13,9 +13,6 @@
   "repository": "https://github.com/codemaster138/ocean-design",
   "author": "Jake Sarjeant <pygamer138@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "styled-components": "^5.2.3"
-  },
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@iconscout/react-unicons": "^1.1.6",
@@ -33,11 +30,13 @@
     "rollup": "^2.45.2",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "styled-components": "^5.2.3"
   },
   "peerDependencies": {
     "@iconscout/react-unicons": "^1.1.6",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.2.3"
   }
 }

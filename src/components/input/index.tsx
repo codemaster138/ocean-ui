@@ -82,6 +82,7 @@ export interface InputProps {
   error?: string;
   onFocus?: (e: FocusEvent) => void;
   onKeyDown?: (e: KeyboardEvent) => void;
+  onClick: (e: MouseEvent) => void;
   disabled?: boolean;
   errorOutline?: boolean;
 }
@@ -96,6 +97,7 @@ export default forwardRef(function (
     error,
     onFocus,
     onKeyDown,
+    onClick,
     disabled,
     errorOutline,
   }: InputProps,
@@ -118,6 +120,7 @@ export default forwardRef(function (
           onChange={(e: ChangeEvent) => update?.((e.target as any).value)}
           onKeyDown={onKeyDown}
           disabled={disabled}
+          onClick={onClick}
         />
         {type === "password" && (
           <TogglePasswordButton onClick={() => setPasswordShown(!passwordShown)}>

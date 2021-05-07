@@ -10,6 +10,7 @@ export interface InputProps {
     error?: string;
     onFocus?: (e: FocusEvent) => void;
     onKeyDown?: (e: KeyboardEvent) => void;
+    onClick: (e: MouseEvent) => void;
     disabled?: boolean;
     errorOutline?: boolean;
 }

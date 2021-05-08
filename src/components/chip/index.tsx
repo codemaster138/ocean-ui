@@ -14,7 +14,8 @@ const Chip = styled.span`
       .alpha(0.3)
       .rgb()
       .toString()};
-  border-radius: 80px;
+  border-radius: 15px;
+  display: inline-block;
   padding: 5px 20px;
 `;
 

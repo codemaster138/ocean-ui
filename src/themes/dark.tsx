@@ -23,7 +23,7 @@ export default {
   /**
    * Backround
    */
-  bg: '#161822',
+  bg: '#202231',
   /**
    * Colors
    */

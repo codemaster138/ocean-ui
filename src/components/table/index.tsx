@@ -56,7 +56,7 @@ const StyledTable = styled.table`
       padding: 15px 20px;
       border: none;
       margin: 0;
-      color: ${p => p.theme.fg};
+      color: ${p => p.theme.fg} !important;
     }
 
     &.header {

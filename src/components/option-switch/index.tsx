@@ -1,3 +1,4 @@
+import Color from "color";
 import React, { PropsWithChildren, ReactNode } from "react";
 import styled from "styled-components";
 
@@ -54,7 +55,7 @@ export const StyledSwitchOption = styled.button`
   transition: 300ms;
 
   &:hover, &:focus {
-    background-color: ${p => p.theme.accent_2};
+    background-color: ${p => Color(p.theme.accent_2).alpha(0.2).rgb().toString()};
   }
 
   &:focus {

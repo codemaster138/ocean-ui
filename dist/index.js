@@ -143,29 +143,6 @@ function ToggleSwitch(props) {
 }
 var templateObject_1$5, templateObject_2$2, templateObject_3$2;
 
-var StyledOptionSwitchContainer = styled__default['default'].div(templateObject_1$4 || (templateObject_1$4 = __makeTemplateObject(["\n  padding: 4px;\n  border-radius: 5px;\n  background-color: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  display: inline-block;\n"], ["\n  padding: 4px;\n  border-radius: 5px;\n  background-color: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  display: inline-block;\n"])), function (p) { return p.theme.accent_3; }, function (p) { return p.theme.accent_3 + "80"; });
-var StyledOptionSwitchWrapper = styled__default['default'].label(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"], ["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"])), function (p) { return p.centered ? 'center' : 'space-between'; });
-var StyledOptionSwitchLabel = styled__default['default'].span(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"], ["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"])), function (p) { return p.theme.accent_1; });
-function OptionSwitch(props) {
-    return (React__default['default'].createElement(StyledOptionSwitchWrapper, __assign({ className: "option-switch" }, __assign(__assign({}, props), { children: undefined, label: undefined })),
-        props.label && React__default['default'].createElement(StyledOptionSwitchLabel, null, props.label),
-        React__default['default'].createElement(StyledOptionSwitchContainer, __assign({}, props))));
-}
-var StyledSwitchOption = styled__default['default'].button(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  border: none;\n  background-color: ", ";\n  color: ", ";\n  border-radius: 5px;\n  padding: 8px 16px;\n  font-size: 13px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  margin: 0;\n  transition: 300ms;\n\n  &:hover, &:focus {\n    background-color: ", ";\n  }\n\n  &:focus {\n    outline: none;\n  }\n\n  cursor: pointer;\n"], ["\n  border: none;\n  background-color: ",
-    ";\n  color: ", ";\n  border-radius: 5px;\n  padding: 8px 16px;\n  font-size: 13px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  margin: 0;\n  transition: 300ms;\n\n  &:hover, &:focus {\n    background-color: ", ";\n  }\n\n  &:focus {\n    outline: none;\n  }\n\n  cursor: pointer;\n"])), function (p) {
-    return p.selected ? p.theme.accent_2 : p.theme.accent_3;
-}, function (p) { return (p.selected ? p.theme.fg : p.theme.accent_1); }, function (p) { return p.theme.accent_2; });
-function SwitchOption(props) {
-    return React__default['default'].createElement(StyledSwitchOption, __assign({}, props));
-}
-var templateObject_1$4, templateObject_2$1, templateObject_3$1, templateObject_4;
-
-var StyledSeparator = styled__default['default'].hr(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  width: 100%;\n  border: none;\n  height: 1px;\n  border-top: 1px solid ", ";\n  margin: 0;\n  padding: 0;\n"], ["\n  width: 100%;\n  border: none;\n  height: 1px;\n  border-top: 1px solid ", ";\n  margin: 0;\n  padding: 0;\n"])), function (p) { return p.theme.accent_2; });
-function Separator(props) {
-    return (React__default['default'].createElement(StyledSeparator, { className: "separator" }));
-}
-var templateObject_1$3;
-
 function createCommonjsModule(fn) {
   var module = { exports: {} };
 	return fn(module, module.exports), module.exports;
@@ -2267,6 +2244,29 @@ function zeroArray(arr, length) {
 }
 
 var color = Color;
+
+var StyledOptionSwitchContainer = styled__default['default'].div(templateObject_1$4 || (templateObject_1$4 = __makeTemplateObject(["\n  padding: 4px;\n  border-radius: 5px;\n  background-color: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  display: inline-block;\n"], ["\n  padding: 4px;\n  border-radius: 5px;\n  background-color: ", ";\n  box-shadow: 0px 5px 10px ", ";\n  display: inline-block;\n"])), function (p) { return p.theme.accent_3; }, function (p) { return p.theme.accent_3 + "80"; });
+var StyledOptionSwitchWrapper = styled__default['default'].label(templateObject_2$1 || (templateObject_2$1 = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"], ["\n  width: 100%;\n  display: flex;\n  align-items: center;\n  justify-content: ", ";\n  flex-flow: row;\n"])), function (p) { return p.centered ? 'center' : 'space-between'; });
+var StyledOptionSwitchLabel = styled__default['default'].span(templateObject_3$1 || (templateObject_3$1 = __makeTemplateObject(["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"], ["\n  font-size: 13px;\n  padding-bottom: 1px;\n  color: ", ";\n"])), function (p) { return p.theme.accent_1; });
+function OptionSwitch(props) {
+    return (React__default['default'].createElement(StyledOptionSwitchWrapper, __assign({ className: "option-switch" }, __assign(__assign({}, props), { children: undefined, label: undefined })),
+        props.label && React__default['default'].createElement(StyledOptionSwitchLabel, null, props.label),
+        React__default['default'].createElement(StyledOptionSwitchContainer, __assign({}, props))));
+}
+var StyledSwitchOption = styled__default['default'].button(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  border: none;\n  background-color: ", ";\n  color: ", ";\n  border-radius: 5px;\n  padding: 8px 16px;\n  font-size: 13px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  margin: 0;\n  transition: 300ms;\n\n  &:hover, &:focus {\n    background-color: ", ";\n  }\n\n  &:focus {\n    outline: none;\n  }\n\n  cursor: pointer;\n"], ["\n  border: none;\n  background-color: ",
+    ";\n  color: ", ";\n  border-radius: 5px;\n  padding: 8px 16px;\n  font-size: 13px;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  margin: 0;\n  transition: 300ms;\n\n  &:hover, &:focus {\n    background-color: ", ";\n  }\n\n  &:focus {\n    outline: none;\n  }\n\n  cursor: pointer;\n"])), function (p) {
+    return p.selected ? p.theme.accent_2 : p.theme.accent_3;
+}, function (p) { return (p.selected ? p.theme.fg : p.theme.accent_1); }, function (p) { return color(p.theme.accent_2).alpha(0.2).rgb().toString(); });
+function SwitchOption(props) {
+    return React__default['default'].createElement(StyledSwitchOption, __assign({}, props));
+}
+var templateObject_1$4, templateObject_2$1, templateObject_3$1, templateObject_4;
+
+var StyledSeparator = styled__default['default'].hr(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  width: 100%;\n  border: none;\n  height: 1px;\n  border-top: 1px solid ", ";\n  margin: 0;\n  padding: 0;\n"], ["\n  width: 100%;\n  border: none;\n  height: 1px;\n  border-top: 1px solid ", ";\n  margin: 0;\n  padding: 0;\n"])), function (p) { return p.theme.accent_2; });
+function Separator(props) {
+    return (React__default['default'].createElement(StyledSeparator, { className: "separator" }));
+}
+var templateObject_1$3;
 
 var StyledTable = styled__default['default'].table(templateObject_1$2 || (templateObject_1$2 = __makeTemplateObject(["\n  width: 100%;\n  margin: 0;\n  margin-top: 25px;\n\n  tr {\n    border-bottom: 1px solid ", ";\n    padding: 0;\n\n    &:nth-child(odd)\u00A0 {\n      td {\n        background: ", ";\n      }\n    }\n\n    &:nth-child(1) {\n      border-top-left-radius: 5px;\n      border-top-right-radius: 5px;\n\n      th {\n        &:first-child {\n          border-top-left-radius: 5px;\n        }\n        &:last-child {\n          border-top-right-radius: 5px;\n        }\n      }\n    }\n\n    &:last-child {\n      border-bottom-left-radius: 5px;\n      border-bottom-right-radius: 5px;\n\n      td {\n        &:first-child {\n          border-bottom-left-radius: 5px;\n        }\n        &:last-child {\n          border-bottom-right-radius: 5px;\n        }\n      }\n    }\n\n    th {\n      text-align: left;\n    }\n\n    th,\n    td {\n      padding: 15px 20px;\n      border: none;\n      margin: 0;\n      color: ", " !important;\n    }\n\n    &.header {\n      background: ", ";\n    }\n\n    &.hoverable {\n      transition: 300ms;\n      cursor: pointer;\n\n      &:hover {\n        background: ", ";\n      }\n    }\n  }\n"], ["\n  width: 100%;\n  margin: 0;\n  margin-top: 25px;\n\n  tr {\n    border-bottom: 1px solid ", ";\n    padding: 0;\n\n    &:nth-child(odd)\u00A0 {\n      td {\n        background: ", ";\n      }\n    }\n\n    &:nth-child(1) {\n      border-top-left-radius: 5px;\n      border-top-right-radius: 5px;\n\n      th {\n        &:first-child {\n          border-top-left-radius: 5px;\n        }\n        &:last-child {\n          border-top-right-radius: 5px;\n        }\n      }\n    }\n\n    &:last-child {\n      border-bottom-left-radius: 5px;\n      border-bottom-right-radius: 5px;\n\n      td {\n        &:first-child {\n          border-bottom-left-radius: 5px;\n        }\n        &:last-child {\n          border-bottom-right-radius: 5px;\n        }\n      }\n    }\n\n    th {\n      text-align: left;\n    }\n\n    th,\n    td {\n      padding: 15px 20px;\n      border: none;\n      margin: 0;\n      color: ", " !important;\n    }\n\n    &.header {\n      background: ", ";\n    }\n\n    &.hoverable {\n      transition: 300ms;\n      cursor: pointer;\n\n      &:hover {\n        background: ", ";\n      }\n    }\n  }\n"])), function (p) { return p.theme.accent_1; }, function (p) { return color(p.theme.bg).alpha(0.7).rgb().toString(); }, function (p) { return p.theme.fg; }, function (p) { return p.theme.accent_3; }, function (p) { return p.theme.bg; });
 function Table(props) {

@@ -32,9 +32,13 @@ const StyledButton = styled.button`
     margin-right: 0;
   }
 
-  &:hover {
+  &:hover, &:focus {
     border-color: ${(p: any) => (p.primary ? "transparent" : p.theme.accent_3)};
     opacity: 0.9;
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:disabled {

@@ -35,9 +35,13 @@ const StyledCheckbox = styled.button`
     transition: 300ms;
   }
 
-  &:hover {
+  &:hover, &:focus {
     cursor: pointer;
     border-color: ${(p: any) => p.theme.accent_1};
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &.checkbox__checkbox--checked {

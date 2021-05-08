@@ -51,9 +51,13 @@ const StyledRadio = styled.input`
     will-change: transform;
   }
 
-  &:hover {
+  &:hover, &:focus {
     cursor: pointer;
     border-color: ${(p: any) => p.theme.accent_1};
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &:checked {

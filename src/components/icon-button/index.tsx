@@ -23,10 +23,14 @@ const StyledIconButton: any = styled.button`
     height: 16px;
   }
 
-  &:hover {
+  &:hover, &:focus {
     opacity: 0.9;
     box-shadow: 0px 6px 15px
       ${(p: any) => (p.primary ? p.theme.primary : p.theme.accent_2) + "9c"};
+  }
+
+  &:focus {
+    outline: none;
   }
 `;
 

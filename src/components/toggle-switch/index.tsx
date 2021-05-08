@@ -48,12 +48,16 @@ const StyledToggle: any = styled.button`
     left: 2px;
   }
 
-  &:hover {
+  &:hover, &:focus {
     border-color: ${(p: any) => p.theme.accent_1};
 
     &:before {
       background: ${(p: any) => p.theme.accent_1};
     }
+  }
+
+  &:focus {
+    outline: none;
   }
 
   &.toggle__toggle--checked {

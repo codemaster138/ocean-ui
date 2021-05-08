@@ -53,6 +53,14 @@ export const StyledSwitchOption = styled.button`
   margin: 0;
   transition: 300ms;
 
+  &:hover, &:focus {
+    background-color: ${p => p.theme.accent_2};
+  }
+
+  &:focus {
+    outline: none;
+  }
+
   cursor: pointer;
 `;
 

@@ -2274,19 +2274,13 @@ function Table(props) {
 }
 var templateObject_1$2;
 
-var Chip = styled__default['default'].span(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  font-size: 13px;\n  color: ", ";\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: 15px;\n  display: inline-block;\n  padding: 5px 20px;\n"], ["\n  font-size: 13px;\n  color: ", ";\n  background-color: ",
-    ";\n  border: 1px solid ",
-    ";\n  border-radius: 15px;\n  display: inline-block;\n  padding: 5px 20px;\n"])), function (props) { return props.theme[props.color || ""] || props.color; }, function (props) {
-    return color(props.theme[props.color || ""] || props.color)
-        .alpha(0.1)
-        .rgb()
-        .toString();
-}, function (props) {
-    return color(props.theme[props.color || ""] || props.color)
-        .alpha(0.3)
-        .rgb()
-        .toString();
-});
+var Chip = styled__default['default'].span(templateObject_1$1 || (templateObject_1$1 = __makeTemplateObject(["\n  font-size: 13px;\n  color: ", ";\n  background-color: ", ";\n  border-radius: 15px;\n  display: inline-block;\n  padding: 5px 20px;\n"], ["\n  font-size: 13px;\n  color: ",
+    ";\n  background-color: ", ";\n  border-radius: 15px;\n  display: inline-block;\n  padding: 5px 20px;\n"])), function (props) {
+    return color(props.theme[props.color || ""] || props.color).contrast(color("#fff")) >
+        color(props.theme[props.color || ""] || props.color).contrast(color("#000"))
+        ? "#fff"
+        : "#000";
+}, function (props) { return props.theme[props.color || ""] || props.color; });
 var templateObject_1$1;
 
 // eslint-disable-next-line

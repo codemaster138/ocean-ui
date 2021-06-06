@@ -10,6 +10,8 @@ export { default as OptionSwitch, SwitchOption } from "./components/option-switc
 export { Separator } from "./components/misc";
 export { default as Table} from "./components/table";
 export { default as Chip} from "./components/chip";
+export { default as Radio } from "./components/radio";
 export { default as defaultLightTheme } from "./themes/light";
 export { default as defaultDarkTheme } from "./themes/dark";
 export { default as Sidebar, SidebarLink, SidebarButton } from "./components/sidebar";
+export * as misc from "./components/misc";
